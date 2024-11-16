@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+</head>
+<body class="bg-red-100">
+    <header id="header" class="justify-start header bg-white shadow-md">
+        <div class="container mx-auto px-4 py-2">
+            <div class="flex items-center justify-start">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <img src="/15-PROYECTO-Carrito/img/logo.jpeg" class="h-20" id="logo" alt="Logo">
+                </div>
+                
+                <!-- Carrito de compras -->
+                <div class="relative ml-auto">
+                    <ul>
+                        <li class="submenu">
+                            <img src="img/cart.png" id="img-carrito" class="h-8 cursor-pointer">
+                            
+                            <!-- Carrito desplegable -->
+                            <div id="carrito" class="absolute right-0 mt-2 w-80 bg-white border rounded shadow-lg hidden p-4 z-50">
+                                <table id="lista-carrito" class="u-full-width w-full text-sm mb-4">
+                                    <thead>
+                                        <tr>
+                                            <th>Imagen</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th>Cantidad</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Contenido dinámico -->
+                                    </tbody>
+                                </table>
+                                <a href="#" id="vaciar-carrito" class="u-full-width bg-red-500 rounded-md text-white px-16 py-2 block text-center">Vaciar Carrito</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+    </header>
+    
+    <h1 id="encabezado" class="m-6 font-sans text-4xl font-semibold bg-pink-400 text-white py-3 px-8 rounded-lg text-center shadow-xl hover:bg-pink-500 transition-all">Productos</h1>
+
+    <div id="lista-cursos" class="mx-16 inline-grid grid-cols-3">
+        <div class="m-4 bg-red-50 p-3">
+            <img src="/15-PROYECTO-Carrito/img/labialMaybelline.webp" class="max-h-48 imagen-curso u-full-width">
+            <div class="info-card">
+                <h4 class="font-bold">Labial Maybelline Matte Ink Super Stay color dreamer</h4>
+                <img src="img/estrellas.png">
+                <p class="mb-4"><span class="u-pull-right ">$13.337</span></p>
+                <a href="#" class="w-full bg-pink-500 text-white py-2 px-4 rounded-md text-center cursor-pointer hover:bg-pink-700 transition-all agregar-carrito" data-id="4">Agregar al Carrito</a>
+            </div>
+        </div>
+        <div class="m-4 bg-red-50 p-3">
+            <img src="/15-PROYECTO-Carrito/img/baseLoreal.webp" class="max-h-48 imagen-curso">
+            <div class="info-card">
+                <h4 class="font-bold">Base De Maquillaje True Match Super Blendable L' Oréal Paris Tono Vanille 2N</h4>
+                <img src="img/estrellas.png">
+                <p class="mb-4"> <span class="u-pull-right ">$22.156</span></p>
+                <a href="#" class="w-full bg-pink-500 text-white py-2 px-4 rounded-md text-center cursor-pointer hover:bg-pink-700 transition-all agregar-carrito" data-id="2">Agregar al Carrito</a>
+            </div>
+        </div>
+        <div class="m-4 bg-red-50 p-3">
+            <img src="img/delineadorRimmel.webp" class="imagen-curso u-full-width max-h-48">
+            <div class="info-card">
+                <h4 class="font-bold">Delineador de ojos Rimmel Scandal Eyes Exaggerate</h4>
+                <img src="img/estrellas.png">
+                <p class="mb-4"> <span class="u-pull-right ">$11.966</span></p>
+                <a href="#" class="w-full bg-pink-500 text-white py-2 px-4 rounded-md text-center cursor-pointer hover:bg-pink-700 transition-all agregar-carrito" data-id="3">Agregar al Carrito</a>
+            </div>
+        </div>
+        <div class="m-4 bg-red-50 p-3">
+            <img src="img/glossKiko.webp" class="imagen-curso u-full-width max-h-48">
+            <div class="info-card">
+                <h4 class="font-bold" >Kiko 3d Hydra Lipgloss Original - Varios Tonos</h4>
+                <img src="img/estrellas.png">
+                <p class="mb-4">  <span class="u-pull-right ">$52.500</span></p>
+                <a href="#" class="w-full bg-pink-500 text-white py-2 px-4 rounded-md text-center cursor-pointer hover:bg-pink-700 transition-all agregar-carrito" data-id="4">Agregar al Carrito</a>
+            </div>
+        </div>
+        <div class="m-4 bg-red-50 p-3">
+            <img src="img/baseMaybelline.webp" class="imagen-curso u-full-width max-h-48">
+            <div class="info-card">
+                <h4 class="font-bold">Base Fit Me Maybelline Fresh Tint Con Vitamina C X 30ml Tono 02</h4>
+                <img src="img/estrellas.png">
+                <p class="mb-4">  <span class="u-pull-right ">$16.340</span></p>
+                <a href="#" class="w-full bg-pink-500 text-white py-2 px-4 rounded-md text-center cursor-pointer hover:bg-pink-700 transition-all agregar-carrito" data-id="5">Agregar al Carrito</a>
+            </div>
+        </div>
+        <div class="m-4 bg-red-50 p-3">
+            <img src="img//comboMAybelline.webp" class="imagen-curso u-full-width max-h-48">
+            <div class="info-card">
+                <h4 class="font-bold">Set Maybelline: Mascara Sky High Wsh + Lifter Gloss Moon</h4>
+                <img src="img/estrellas.png">
+                <p class="mb-4">  <span class="u-pull-right ">$28.150</span></p>
+                <a href="#" class="w-full bg-pink-500 text-white py-2 px-4 rounded-md text-center cursor-pointer hover:bg-pink-700 transition-all agregar-carrito" data-id="6">Agregar al Carrito</a>
+            </div>
+        </div>
+        <div class="m-4 bg-red-50 p-3">
+            <img src="img/correctorLoreal.webp" class="imagen-curso u-full-width max-h-48">
+            <div class="info-card">
+                <h4 class="font-bold">Corrector Líquido Accord Parfait L'oréal Paris 16g Tono Beige</h4>
+                <img src="img/estrellas.png">
+                <p class="mb-4">  <span class="u-pull-right ">$16.512</span></p>
+                <a href="#" class="w-full bg-pink-500 text-white py-2 px-4 rounded-md text-center cursor-pointer hover:bg-pink-700 transition-all agregar-carrito" data-id="7">Agregar al Carrito</a>
+            </div>
+        </div>
+        <div class="m-4 bg-red-50 p-3">
+            <img src="img/mascaraMaybelline2.webp" class="imagen-curso u-full-width max-h-48">
+            <div class="info-card">
+                <h4 class="font-bold">Mascara De Pestañas The Falsies Surreal Maybelline New York</h4>
+                <img src="img/estrellas.png">
+                <p class="mb-4">  <span class="u-pull-right ">$17.818</span></p>
+                <a href="#" class="w-full bg-pink-500 text-white py-2 px-4 rounded-md text-center cursor-pointer hover:bg-pink-700 transition-all agregar-carrito" data-id="8">Agregar al Carrito</a>
+            </div>
+        </div>
+        <div class="m-4 bg-red-50 p-3">
+            <img src="img/mascaraMaybelline.webp" class="imagen-curso u-full-width max-h-48">
+            <div class="info-card">
+                <h4 class="font-bold">Máscara De Pestañas Maybelline Lash Sensational Sky High Color Very Black Washable</h4>
+                <img src="img/estrellas.png">
+                <p class="mb-4">  <span class="u-pull-right ">$
+                    17.817</span></p>
+                <a href="#" class="w-full bg-pink-500 text-white py-2 px-4 rounded-md text-center cursor-pointer hover:bg-pink-700 transition-all agregar-carrito" data-id="9">Agregar al Carrito</a>
+            </div>
+        </div>
+        <div class="m-4 bg-red-50 p-3">
+            <img src="img/correctorMaybelline.webp" class="imagen-curso u-full-width max-h-48">
+            <div class="info-card">
+                <h4 class="font-bold">Corrector De Ojeras Maybelline Instant Age Rewind Tono 110 Fair</h4>
+                <img src="img/estrellas.png">
+                <p class="mb-4">  <span class="u-pull-right ">$12.557</span></p>
+                <a href="#" class="w-full bg-pink-500 text-white py-2 px-4 rounded-md text-center cursor-pointer hover:bg-pink-700 transition-all agregar-carrito" data-id="10">Agregar al Carrito</a>
+            </div>
+        </div>
+        <div class="m-4 bg-red-50 p-3">
+            <img src="img/labialRevlon.webp" class="imagen-curso u-full-width max-h-48">
+            <div class="info-card">
+                <h4 class="font-bold">Lápiz labial Revlon ColorStay Suede Ink Lipstick</h4>
+                <img src="img/estrellas.png">
+                <p class="mb-4">  <span class="u-pull-right ">$18.183</span></p>
+                <a href="#" class="w-full bg-pink-500 text-white py-2 px-4 rounded-md text-center cursor-pointer hover:bg-pink-700 transition-all agregar-carrito" data-id="11">Agregar al Carrito</a>
+            </div>
+        </div>
+        <div class="m-4 bg-red-50 p-3">
+            <img src="img/mascaraLoreal.webp" class="imagen-curso u-full-width max-h-48">
+            <div class="info-card">
+                <h4 class="font-bold">Máscara de Pestañas L'Oréal Paris Air Volume 9.4ml Tono Negro</h4>
+                <img src="img/estrellas.png">
+                <p class="mb-4">  <span class="u-pull-right ">$15.097</span></p>
+                <a href="#" class="w-full bg-pink-500 text-white py-2 px-4 rounded-md text-center cursor-pointer hover:bg-pink-700 transition-all agregar-carrito" data-id="12">Agregar al Carrito</a>
+            </div>
+        </div>
+    </div>  
+
+    <footer class="mt-10 bg-pink-600 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-between items-center">
+                <!-- Sección de Información -->
+                <div class="w-full sm:w-1/3 mb-4 sm:mb-0">
+                    <h3 class="text-2xl font-bold mb-2">Sobre Nosotros</h3>
+                    <p class="text-sm">Somos una tienda en línea especializada en productos de maquillaje de alta calidad. ¡Descubre nuestra colección y luce increíble!</p>
+                </div>
+                
+                <!-- Sección de Enlaces -->
+                <div class="w-full sm:w-1/3 mb-4 sm:mb-0">
+                    <h3 class="text-2xl font-bold mb-2">Enlaces Rápidos</h3>
+                    <ul class="text-sm">
+                        <li><a href="#" class="hover:text-pink-200">Inicio</a></li>
+                        <li><a href="#" class="hover:text-pink-200">Productos</a></li>
+                        <li><a href="#" class="hover:text-pink-200">Contacto</a></li>
+                        <li><a href="#" class="hover:text-pink-200">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Sección de Redes Sociales -->
+                <div class="w-full sm:w-1/3">
+                    <h3 class="text-2xl font-bold mb-2">Síguenos</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-pink-200"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-pink-200"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-pink-200"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-pink-200"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-5 bg-pink-700 text-center py-4">
+            <p class="text-sm">&copy; 2024 Tienda de Maquillaje. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
